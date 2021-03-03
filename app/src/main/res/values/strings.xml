@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">RajwinderAssignment1</string>
+    <string name="app_title">The Pizza Palace</string>
+    <string name="customerName">Customer Name</string>
+    <string name="typeOfPizza">Type Of Pizza</string>
+    <string name="veggiePizza">Veggie Pizza</string>
+    <string name="nonVeggiePizza">Non-Veggie Pizza</string>
+    <string name="sauce">Sauce</string>
+    <string name="cheese">Cheese</string>
+    <string name="pizzaSize">Select the Size Of Pizza</string>
+    <string name="selectToppings">Select any one of the added toppings</string>
+
+    <!-- Toppings for Veg Pizza -->
+    <string name="olives">Olives</string>
+    <string name="bellPepper">Bell Pepper</string>
+    <string name="cherryTomatoes">cherry Tomatoes</string>
+
+    <!-- Toppings for Non-Veg Pizza -->
+    <string name="bacon">Bacon</string>
+    <string name="ham">Ham</string>
+    <string name="sausages">Sausages</string>
+
+    <string name="province">Select Province</string>
+    <string name="salesDateLabel">Select the Sales Date</string>
+
+    <string name="submit">Submit</string>
+</resources>

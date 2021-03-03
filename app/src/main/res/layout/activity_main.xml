@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        style="@style/textStyle"
+        android:background="#c5e1a5"
+        android:gravity="center_horizontal"
+        android:text="@string/app_title" />
+
+    <EditText
+        android:id="@+id/customerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/customerName"
+        style="@style/subHeading"
+        android:layout_below="@id/title"
+        android:layout_marginTop="10dp"
+        android:inputType="text"/>
+
+    <TextView
+        android:id="@+id/typeOfPizza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/customerName"
+        style="@style/textStyle"
+        android:text="@string/typeOfPizza" />
+
+    <RadioGroup
+        android:id="@+id/pizzaType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/typeOfPizza"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/veggiePizza"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/subHeading"
+            android:text="@string/veggiePizza" />
+
+        <RadioButton
+            android:id="@+id/nonVeggiePizza"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/subHeading"
+            android:text="@string/nonVeggiePizza" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/pizzaType"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/sauce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/subHeading"
+            android:text="@string/sauce" />
+
+        <CheckBox
+            android:id="@+id/cheese"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/subHeading"
+            android:layout_marginStart="40dp"
+            android:text="@string/cheese" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/checkbox"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/pizzaSizeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textStyle"
+            android:text="@string/pizzaSize" />
+
+        <Spinner
+            android:id="@+id/sizeOfPizza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/bg"
+            android:gravity="center"
+            android:layout_marginStart="20dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/toppings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/spinner"
+        style="@style/textStyle"
+        android:text="@string/selectToppings" />
+
+    <RadioGroup
+        android:id="@+id/vegPizzaToppings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toppings"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/olives"
+            style="@style/subHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/olives" />
+
+        <RadioButton
+            android:id="@+id/bellPepper"
+            style="@style/subHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bellPepper" />
+
+        <RadioButton
+            android:id="@+id/cherryTomatoes"
+            style="@style/subHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cherryTomatoes" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/nonVegPizzaToppings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toppings"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/ham"
+            style="@style/subHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ham" />
+
+        <RadioButton
+            android:id="@+id/bacon"
+            style="@style/subHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bacon" />
+
+        <RadioButton
+            android:id="@+id/sausages"
+            style="@style/subHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sausages" />
+    </RadioGroup>
+
+    <AutoCompleteTextView
+        android:id="@+id/province"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vegPizzaToppings"
+        android:hint="@string/province"
+        android:completionThreshold="2"/>
+
+
+    <EditText
+        android:id="@+id/saleDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/salesDateLabel"
+        android:inputType="date"
+        android:layout_below="@id/province" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/saleDate"
+        style="@style/buttonStyle"
+        android:layout_centerHorizontal="true"
+        android:text="@string/submit"
+      />
+    </RelativeLayout>
+
+</ScrollView>
